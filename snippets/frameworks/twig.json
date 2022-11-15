@@ -1,14 +1,12 @@
 {
   "asset": {
     "prefix": "asset",
-    "body":
-    "{% set asset = ${1:entry.assetFieldHandle}.one() %}\n\n{% if asset %}\n\t<img src=\"{{ asset.getUrl(\"${2:thumb}\") }}\" width=\"{{ asset.getWidth(\"${2:thumb}\") }}\" height=\"{{ asset.getHeight(\"${2:thumb}\") }}\" alt=\"{{ asset.title }}\">\n{% endif %}",
+    "body": "{% set asset = ${1:entry.assetFieldHandle}.one() %}\n\n{% if asset %}\n\t<img src=\"{{ asset.getUrl(\"${2:thumb}\") }}\" width=\"{{ asset.getWidth(\"${2:thumb}\") }}\" height=\"{{ asset.getHeight(\"${2:thumb}\") }}\" alt=\"{{ asset.title }}\">\n{% endif %}",
     "description": "asset"
   },
   "assets": {
     "prefix": "assets",
-    "body":
-    "{% for image in craft.assets.\n\t.sourceId(\"${1:1}\")\n\t.kind(\"${2:image}\")\n\t.limit(${3:10})\n}).all() %}\n\t<img src=\"{{ image.url${4:(\"${5:thumb}\")} }}\" width=\"${6:200}\" height=\"${7:200}\" alt=\"{{ image.title }}\">\n{% endfor %}\n$0",
+    "body": "{% for image in craft.assets.\n\t.sourceId(\"${1:1}\")\n\t.kind(\"${2:image}\")\n\t.limit(${3:10})\n}).all() %}\n\t<img src=\"{{ image.url${4:(\"${5:thumb}\")} }}\" width=\"${6:200}\" height=\"${7:200}\" alt=\"{{ image.title }}\">\n{% endfor %}\n$0",
     "description": "craft.assets"
   },
   "autoescape": {
@@ -53,32 +51,27 @@
   },
   "assetso": {
     "prefix": "assetso",
-    "body":
-    "{% set assets = craft.assets({\n\tsourceId: \"${1:1}\",\n\tkind: \"${2:image}\",\n\tlimit: ${3:10}\n}).all() %}\n\n{% for image in assets %}\n\t<img src=\"{{ image.url${4:(\"${5:thumb}\")} }}\" width=\"${6:200}\" height=\"${7:200}\" alt=\"{{ image.title }}\">\n{% endfor %}\n$0",
+    "body": "{% set assets = craft.assets({\n\tsourceId: \"${1:1}\",\n\tkind: \"${2:image}\",\n\tlimit: ${3:10}\n}).all() %}\n\n{% for image in assets %}\n\t<img src=\"{{ image.url${4:(\"${5:thumb}\")} }}\" width=\"${6:200}\" height=\"${7:200}\" alt=\"{{ image.title }}\">\n{% endfor %}\n$0",
     "description": "craft.assets - object syntax"
   },
   "categorieso": {
     "prefix": "categorieso",
-    "body":
-    "{% set categories = craft.categories({\n\tgroup: \"${1:categoryGroupHandle}\",\n\tlimit: \"${2:11}\"\n}).all() %}\n\n<ul>\n\t{% nav category in categories %}\n\t\t<li>\n\t\t\t<a href=\"{{ category.url }}\">{{ category.title }}</a>\n\t\t\t{% ifchildren %}\n\t\t\t\t<ul>\n\t\t\t\t\t{% children %}\n\t\t\t\t</ul>\n\t\t\t{% endifchildren %}\n\t\t</li>\n\t{% endnav %}\n</ul>",
+    "body": "{% set categories = craft.categories({\n\tgroup: \"${1:categoryGroupHandle}\",\n\tlimit: \"${2:11}\"\n}).all() %}\n\n<ul>\n\t{% nav category in categories %}\n\t\t<li>\n\t\t\t<a href=\"{{ category.url }}\">{{ category.title }}</a>\n\t\t\t{% ifchildren %}\n\t\t\t\t<ul>\n\t\t\t\t\t{% children %}\n\t\t\t\t</ul>\n\t\t\t{% endifchildren %}\n\t\t</li>\n\t{% endnav %}\n</ul>",
     "description": "craft.categories - object syntax"
   },
   "categories": {
     "prefix": "categories",
-    "body":
-    "<ul>\n\t{% nav category in craft.categories\n\t\t.group(\"${1:categoryGroupHandle}\")\n\t\t.limit(${2:11})\n\t\t.all()\n\t%}\n\t\t<li>\n\t\t\t<a href=\"{{ category.url }}\">{{ category.title }}</a>\n\t\t\t{% ifchildren %}\n\t\t\t\t<ul>\n\t\t\t\t\t{% children %}\n\t\t\t\t</ul>\n\t\t\t{% endifchildren %}\n\t\t</li>\n\t{% endnav %}\n</ul>",
+    "body": "<ul>\n\t{% nav category in craft.categories\n\t\t.group(\"${1:categoryGroupHandle}\")\n\t\t.limit(${2:11})\n\t\t.all()\n\t%}\n\t\t<li>\n\t\t\t<a href=\"{{ category.url }}\">{{ category.title }}</a>\n\t\t\t{% ifchildren %}\n\t\t\t\t<ul>\n\t\t\t\t\t{% children %}\n\t\t\t\t</ul>\n\t\t\t{% endifchildren %}\n\t\t</li>\n\t{% endnav %}\n</ul>",
     "description": "craft.categories"
   },
   "entrieso": {
     "prefix": "entrieso",
-    "body":
-    "{% set entries = craft.entries({\n\tsection: \"${1:sectionName}\",\n\tlimit: \"${2:10}\"\n}).all() %}\n\n{% for entry in entries %}\n\t<a href=\"{{ entry.url }}\">{{ entry.title }}</a>\n{% endfor %}\n$0",
+    "body": "{% set entries = craft.entries({\n\tsection: \"${1:sectionName}\",\n\tlimit: \"${2:10}\"\n}).all() %}\n\n{% for entry in entries %}\n\t<a href=\"{{ entry.url }}\">{{ entry.title }}</a>\n{% endfor %}\n$0",
     "description": "craft.entries - object syntax"
   },
   "entries": {
     "prefix": "entries",
-    "body":
-    "{% for entry in craft.entries\n\t.section(\"${1:sectionName}\")\n\t.limit(${2:10})\n\t.all()\n%}\n\t<a href=\"{{ entry.url }}\">{{ entry.title }}</a>\n{% endfor %}\n$0",
+    "body": "{% for entry in craft.entries\n\t.section(\"${1:sectionName}\")\n\t.limit(${2:10})\n\t.all()\n%}\n\t<a href=\"{{ entry.url }}\">{{ entry.title }}</a>\n{% endfor %}\n$0",
     "description": "craft.entries"
   },
   "t": {
@@ -93,8 +86,7 @@
   },
   "replacex": {
     "prefix": "replacex",
-    "body":
-    "{{ ${1:$TM_SELECTED_TEXT} | replace(\"/(search)/i\", \"replace\") }}$0",
+    "body": "{{ ${1:$TM_SELECTED_TEXT} | replace(\"/(search)/i\", \"replace\") }}$0",
     "description": "replace regex with | replace(\"/(search)/i\", \"replace\")"
   },
   "split": {
@@ -104,26 +96,22 @@
   },
   "tagso": {
     "prefix": "tagso",
-    "body":
-    "{% set tags = craft.tags({\n\tgroup: \"${1:tagGroupHandle}\"\n}).all() %}\n\n<ul>\n\t{% for tag in tags %}\n\t\t<li>{{ tag }}</a></li>\n\t{% endfor %}\n</ul>\n$0",
+    "body": "{% set tags = craft.tags({\n\tgroup: \"${1:tagGroupHandle}\"\n}).all() %}\n\n<ul>\n\t{% for tag in tags %}\n\t\t<li>{{ tag }}</a></li>\n\t{% endfor %}\n</ul>\n$0",
     "description": "craft.tags - object syntax"
   },
   "tags": {
     "prefix": "tags",
-    "body":
-    "<ul>\n\t{% for tag in craft.tags.group(\"${1:tagGroupHandle}\").all() %}\n\t\t<li>{{ tag }}</li>\n\t{% endfor %}\n</ul>\n$0",
+    "body": "<ul>\n\t{% for tag in craft.tags.group(\"${1:tagGroupHandle}\").all() %}\n\t\t<li>{{ tag }}</li>\n\t{% endfor %}\n</ul>\n$0",
     "description": "craft.tags"
   },
   "userso": {
     "prefix": "userso",
-    "body":
-    "{% set users = craft.users({\n\tgroup: \"${1:userGroupHandle}\"\n}).all() %}\n\n{% for user in users %}\n\t{{ user.firstName }} {{ user.lastName }}\n{% endfor %}\n$0",
+    "body": "{% set users = craft.users({\n\tgroup: \"${1:userGroupHandle}\"\n}).all() %}\n\n{% for user in users %}\n\t{{ user.firstName }} {{ user.lastName }}\n{% endfor %}\n$0",
     "description": "craft.users - object syntax"
   },
   "users": {
     "prefix": "users",
-    "body":
-    "{% for user in craft.users.group(\"${1:userGroupHandle}\").all() %}\n\t{{ user.firstName }} {{ user.lastName }}\n{% endfor %}\n$0",
+    "body": "{% for user in craft.users.group(\"${1:userGroupHandle}\").all() %}\n\t{{ user.firstName }} {{ user.lastName }}\n{% endfor %}\n$0",
     "description": "craft.users"
   },
   "csrf": {
@@ -278,8 +266,7 @@
   },
   "fore": {
     "prefix": "fore",
-    "body":
-    "{% for ${1:item} in ${2:items} %}\n\t$3\n{% else %}\n\t$0\n{% endfor %}",
+    "body": "{% for ${1:item} in ${2:items} %}\n\t$3\n{% else %}\n\t$0\n{% endfor %}",
     "description": "for ... else"
   },
   "for": {
@@ -339,8 +326,7 @@
   },
   "inckv": {
     "prefix": "inckv",
-    "body":
-    "{% include \"${1:template}\" with {\n\t${2:key}: ${3:\"${4:value}\"}\n} %}\n$0",
+    "body": "{% include \"${1:template}\" with {\n\t${2:key}: ${3:\"${4:value}\"}\n} %}\n$0",
     "description": "include w/ key/value"
   },
   "include": {
@@ -385,26 +371,22 @@
   },
   "matrix": {
     "prefix": "matrix",
-    "body":
-    "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% if block.type == \"${2:blockHandle}\" %}\n\t\t{{ block.${3:fieldHandle} }}\n\t{% endif %}\n\n\t{% if block.type == \"${4:blockHandle}\" %}\n\t\t{{ block.${5:fieldHandle} }}\n\t{% endif %}\n\n{% endfor %}\n$0",
+    "body": "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% if block.type == \"${2:blockHandle}\" %}\n\t\t{{ block.${3:fieldHandle} }}\n\t{% endif %}\n\n\t{% if block.type == \"${4:blockHandle}\" %}\n\t\t{{ block.${5:fieldHandle} }}\n\t{% endif %}\n\n{% endfor %}\n$0",
     "description": "matrix"
   },
   "matrixif": {
     "prefix": "matrixif",
-    "body":
-    "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% if block.type == \"${2:blockHandle}\" %}\n\t\t{{ block.${3:fieldHandle} }}\n\t{% endif %}\n\n\t{% if block.type == \"${4:blockHandle}\" %}\n\t\t{{ block.${5:fieldHandle} }}\n\t{% endif %}\n\n{% endfor %}\n$0",
+    "body": "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% if block.type == \"${2:blockHandle}\" %}\n\t\t{{ block.${3:fieldHandle} }}\n\t{% endif %}\n\n\t{% if block.type == \"${4:blockHandle}\" %}\n\t\t{{ block.${5:fieldHandle} }}\n\t{% endif %}\n\n{% endfor %}\n$0",
     "description": "matrixif"
   },
   "matrixifelse": {
     "prefix": "matrixifelse",
-    "body":
-    "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% if block.type == \"${2:blockHandle}\" %}\n\n\t\t{{ block.${3:fieldHandle} }}\n\n\t{% elseif block.type == \"${4:blockHandle}\" %}\n\n\t\t$0\n\t\n\t{% endif %}\n\n{% endfor %}",
+    "body": "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% if block.type == \"${2:blockHandle}\" %}\n\n\t\t{{ block.${3:fieldHandle} }}\n\n\t{% elseif block.type == \"${4:blockHandle}\" %}\n\n\t\t$0\n\t\n\t{% endif %}\n\n{% endfor %}",
     "description": "matrixifelse"
   },
   "matrixswitch": {
     "prefix": "matrixswitch",
-    "body":
-    "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% switch block.type %}\n\n\t\t{% case \"${2:blockHandle}\" %}\n\n\t\t\t{{ block.${3:fieldHandle} }}\n\n\t\t{% case \"${4:blockHandle}\" %}\n\n\t\t\t$0\n\n\t{% endswitch %}\n\n{% endfor %}",
+    "body": "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% switch block.type %}\n\n\t\t{% case \"${2:blockHandle}\" %}\n\n\t\t\t{{ block.${3:fieldHandle} }}\n\n\t\t{% case \"${4:blockHandle}\" %}\n\n\t\t\t$0\n\n\t{% endswitch %}\n\n{% endfor %}",
     "description": "matrixswitch"
   },
   "max": {
@@ -424,26 +406,22 @@
   },
   "paginate": {
     "prefix": "paginate",
-    "body":
-    "{% paginate ${1:elements} as ${2:pageInfo}, ${3:pageEntries} %}\n\n{% for item in ${3:pageEntries} %}\n\t$0\n{% endfor %}\n\n{% if ${2:pageInfo}.prevUrl %}<a href=\"{{ ${2:pageInfo}.prevUrl }}\">Previous Page</a>{% endif %}\n{% if ${2:pageInfo}.nextUrl %}<a href=\"{{ ${2:pageInfo}.nextUrl }}\">Next Page</a>{% endif %}",
+    "body": "{% paginate ${1:elements} as ${2:pageInfo}, ${3:pageEntries} %}\n\n{% for item in ${3:pageEntries} %}\n\t$0\n{% endfor %}\n\n{% if ${2:pageInfo}.prevUrl %}<a href=\"{{ ${2:pageInfo}.prevUrl }}\">Previous Page</a>{% endif %}\n{% if ${2:pageInfo}.nextUrl %}<a href=\"{{ ${2:pageInfo}.nextUrl }}\">Next Page</a>{% endif %}",
     "description": "paginate simple"
   },
   "paginate1": {
     "prefix": "paginate",
-    "body":
-    "{# PAGINATION\n\t\t\nFor this pagination to work properly, we need to be sure to set\nthe paginateBase variable in the template we are including the \npagination in.\n\n{% set paginateBase = \"/blog/p\" %}\n#}\n\n{% if pageInfo.totalPages > 1 %}\n<ul>\n\t{% if pageInfo.currentPage != \"1\" %}\n\t\t<li><a href=\"{{ paginateBase ~ \"1\" }}\">First Page</a></li>\n\t{% endif %}\n\n\t{% if pageInfo.prevUrl %}\n\t\t<li><a href=\"{{ pageInfo.prevUrl }}\">Previous Page</a></li>\n\t{% endif %}\n\n\t{% for pageNumber in 1..pageInfo.totalPages %}\n\t\t<li {% if pageInfo.currentPage == pageNumber %}class=\"active-page\"{% endif %}>\n\t\t\t<a href=\"{{ paginateBase ~ pageNumber }}\">{{ pageNumber }}</a>\n\t\t</li>\n\t{% endfor %}\n\n\t{% if pageInfo.nextUrl %}\n\t\t<li><a href=\"{{ pageInfo.nextUrl }}\">Next Page</a></li>\n\t{% endif %}\n\n\t{% if pageInfo.currentPage != pageInfo.total %}\n\t\t<li><a href=\"{{ paginateBase ~ pageInfo.total }}\">Last Page</a></li>\n\t{% endif %}\n</ul>\n{% endif %}\n$0",
+    "body": "{# PAGINATION\n\t\t\nFor this pagination to work properly, we need to be sure to set\nthe paginateBase variable in the template we are including the \npagination in.\n\n{% set paginateBase = \"/blog/p\" %}\n#}\n\n{% if pageInfo.totalPages > 1 %}\n<ul>\n\t{% if pageInfo.currentPage != \"1\" %}\n\t\t<li><a href=\"{{ paginateBase ~ \"1\" }}\">First Page</a></li>\n\t{% endif %}\n\n\t{% if pageInfo.prevUrl %}\n\t\t<li><a href=\"{{ pageInfo.prevUrl }}\">Previous Page</a></li>\n\t{% endif %}\n\n\t{% for pageNumber in 1..pageInfo.totalPages %}\n\t\t<li {% if pageInfo.currentPage == pageNumber %}class=\"active-page\"{% endif %}>\n\t\t\t<a href=\"{{ paginateBase ~ pageNumber }}\">{{ pageNumber }}</a>\n\t\t</li>\n\t{% endfor %}\n\n\t{% if pageInfo.nextUrl %}\n\t\t<li><a href=\"{{ pageInfo.nextUrl }}\">Next Page</a></li>\n\t{% endif %}\n\n\t{% if pageInfo.currentPage != pageInfo.total %}\n\t\t<li><a href=\"{{ paginateBase ~ pageInfo.total }}\">Last Page</a></li>\n\t{% endif %}\n</ul>\n{% endif %}\n$0",
     "description": "paginate advanced"
   },
   "redirect": {
     "prefix": "redirect",
-    "body":
-    "{% redirect \"${1:template/path or http://straightupcraft.com}\" %}\n$0",
+    "body": "{% redirect \"${1:template/path or http://straightupcraft.com}\" %}\n$0",
     "description": "redirect"
   },
   "getparam": {
     "prefix": "getparam",
-    "body":
-    "craft.app.request.getParam(${1:\"Query String or Post Variable Name\"})\n$0",
+    "body": "craft.app.request.getParam(${1:\"Query String or Post Variable Name\"})\n$0",
     "description": "request getParam"
   },
   "getbodyparam": {
@@ -503,8 +481,7 @@
   },
   "switch": {
     "prefix": "switch",
-    "body":
-    "{% switch ${1:variable} %}\n\n\t{% case \"${2:value1}\" %}\n\t\n\n\t{% case \"${3:value2}\" %}\n\t\n\n\t{% default %}\n\t\n\n{% endswitch %}\n$0",
+    "body": "{% switch ${1:variable} %}\n\n\t{% case \"${2:value1}\" %}\n\t\n\n\t{% case \"${3:value2}\" %}\n\t\n\n\t{% default %}\n\t\n\n{% endswitch %}\n$0",
     "description": "switch"
   },
   "trans": {
@@ -514,8 +491,7 @@
   },
   "urla": {
     "prefix": "urla",
-    "body":
-    "url(\"${1:path}\", ${2:{foo:\"1\", bar:\"2\"\\}}, ${3:\"http\"}, ${4:false})$0",
+    "body": "url(\"${1:path}\", ${2:{foo:\"1\", bar:\"2\"\\}}, ${3:\"http\"}, ${4:false})$0",
     "description": "url w/ arguments"
   },
   "url": {

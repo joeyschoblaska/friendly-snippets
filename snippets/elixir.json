@@ -1,29 +1,17 @@
 {
   "defmodule": {
     "prefix": "defmo",
-    "body": [
-      "defmodule ${1:module} do",
-      "  $0",
-      "end"
-    ],
+    "body": ["defmodule ${1:module} do", "  $0", "end"],
     "description": "Define a module"
   },
   "def": {
     "prefix": "def",
-    "body": [
-      "def ${1:name}() do",
-      "  $0",
-      "end"
-    ],
+    "body": ["def ${1:name}() do", "  $0", "end"],
     "description": "Define a function"
   },
   "defp": {
     "prefix": "defp",
-    "body": [
-      "defp ${1:name}() do",
-      "  $0",
-      "end"
-    ],
+    "body": ["defp ${1:name}() do", "  $0", "end"],
     "description": "Define a private function"
   },
   "IO.puts": {
@@ -40,11 +28,7 @@
   },
   "if .. do .. end": {
     "prefix": "if",
-    "body": [
-      "if ${1:condition} do",
-      "  $0",
-      "end"
-    ]
+    "body": ["if ${1:condition} do", "  $0", "end"]
   },
   "if .. do:": {
     "prefix": "if:",
@@ -52,13 +36,7 @@
   },
   "if .. do .. else .. end": {
     "prefix": "ife",
-    "body": [
-      "if ${1:condition} do",
-      "  $2",
-      "else",
-      "  $0",
-      "end"
-    ]
+    "body": ["if ${1:condition} do", "  $2", "else", "  $0", "end"]
   },
   "if .. do: .. else:": {
     "prefix": "ife:",
@@ -66,29 +44,15 @@
   },
   "cond": {
     "prefix": "cond",
-    "body": [
-      "cond do",
-      "  $1 -> ",
-      "  $0",
-      "end"
-    ]
+    "body": ["cond do", "  $1 -> ", "  $0", "end"]
   },
   "case": {
     "prefix": "case",
-    "body": [
-      "case $1 do",
-      "  $2 -> ",
-      "    $0",
-      "end"
-    ]
+    "body": ["case $1 do", "  $2 -> ", "    $0", "end"]
   },
   "for": {
     "prefix": "for",
-    "body": [
-      "for ${1:item} <- ${2:items} do",
-      "  $0",
-      "end"
-    ]
+    "body": ["for ${1:item} <- ${2:items} do", "  $0", "end"]
   },
   "def + doc": {
     "prefix": "defd",
@@ -124,19 +88,11 @@
   },
   "doc": {
     "prefix": "doc",
-    "body": [
-      "@doc \"\"\"",
-      "$0",
-      "\"\"\""
-    ]
+    "body": ["@doc \"\"\"", "$0", "\"\"\""]
   },
   "doc s": {
     "prefix": "docs",
-    "body": [
-      "@doc ~S\"\"\"",
-      "$0",
-      "\"\"\""
-    ]
+    "body": ["@doc ~S\"\"\"", "$0", "\"\"\""]
   },
   "doc false": {
     "prefix": "docf",
@@ -144,19 +100,11 @@
   },
   "moduledoc": {
     "prefix": "mdoc",
-    "body": [
-      "@moduledoc \"\"\"",
-      "$0",
-      "\"\"\""
-    ]
+    "body": ["@moduledoc \"\"\"", "$0", "\"\"\""]
   },
   "moduledoc s": {
     "prefix": "mdocs",
-    "body": [
-      "@moduledoc ~S\"\"\"",
-      "$0",
-      "\"\"\""
-    ]
+    "body": ["@moduledoc ~S\"\"\"", "$0", "\"\"\""]
   },
   "moduledoc false": {
     "prefix": "mdocf",
@@ -168,26 +116,15 @@
   },
   "test": {
     "prefix": "test",
-    "body": [
-      "test ${1:name} do",
-      "  $0",
-      "end"
-    ]
+    "body": ["test ${1:name} do", "  $0", "end"]
   },
   "des": {
     "prefix": "desc",
-    "body": [
-      "describe \"${1:test group subject}\" do",
-      "  $0",
-      "end"
-    ]
+    "body": ["describe \"${1:test group subject}\" do", "  $0", "end"]
   },
   "IEx.pry": {
     "prefix": "pry",
-    "body":  [
-      "require IEx; IEx.pry",
-      "$0"
-    ]
+    "body": ["require IEx; IEx.pry", "$0"]
   },
   "pipe char": {
     "prefix": "p",

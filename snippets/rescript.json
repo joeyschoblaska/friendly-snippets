@@ -1,11 +1,7 @@
 {
   "Module": {
     "prefix": ["module"],
-    "body": [
-		"module ${1:Name} = {",
-		"\t${2:// Module contents}",
-		"}"
-	]
+    "body": ["module ${1:Name} = {", "\t${2:// Module contents}", "}"]
   },
   "Switch": {
     "prefix": ["switch"],
@@ -88,24 +84,15 @@
   },
   "inline functin": {
     "prefix": ["fn"],
-    "body": [
-      "let ${1:name} = (${2}) => ${0}"
-    ]
+    "body": ["let ${1:name} = (${2}) => ${0}"]
   },
   "function": {
     "prefix": ["function"],
-    "body": [
-      "let ${1:doSomeStuff} = (${2}) => {",
-      "\t${0}",
-      "}"
-    ]
+    "body": ["let ${1:doSomeStuff} = (${2}) => {", "\t${0}", "}"]
   },
   "pipe functions": {
     "prefix": ["fnpp", "funcpp", "pipe"],
-    "body": [
-		"${1:firstFunction}",
-		"\t->${2:secondFunction}"
-	]
+    "body": ["${1:firstFunction}", "\t->${2:secondFunction}"]
   },
   "console.log": {
     "prefix": ["cl", "col"],
@@ -191,11 +178,7 @@
   },
   "Top level js embed": {
     "prefix": ["tle", "tlr"],
-    "body": [
-		"%%raw(`",
-		"\t${1://js code}",
-		"`)"
-	]
+    "body": ["%%raw(`", "\t${1://js code}", "`)"]
   },
   "expression level js embed": {
     "prefix": ["ele", "exe", "elr"],
@@ -207,11 +190,6 @@
   },
   "React Component": {
     "prefix": ["react.component", "@react"],
-    "body": [
-		"@react.component",
-		"let make = (${1}) => {",
-		"\t${2}",
-		"}"
-	]
+    "body": ["@react.component", "let make = (${1}) => {", "\t${2}", "}"]
   }
 }

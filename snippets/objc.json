@@ -1,4 +1,3 @@
-
 {
   "for": {
     "prefix": "for",
@@ -101,7 +100,13 @@
   },
   "switch": {
     "prefix": "switch",
-    "body": ["switch (${1:switch_on}) {", "\tdefault:", "\t\t$0", "\t\tbreak;", "}"],
+    "body": [
+      "switch (${1:switch_on}) {",
+      "\tdefault:",
+      "\t\t$0",
+      "\t\tbreak;",
+      "}"
+    ],
     "description": "Code snippet for switch statement"
   },
   "case": {
@@ -214,68 +219,75 @@
     "description": "Create an Objc Class implementation"
   },
   "Create property": {
-    "prefix": [ "@property", "prop" ],
-    "body": [ "@property (nonatomic, ${1:memory control}) ${2:property};\n" ],
+    "prefix": ["@property", "prop"],
+    "body": ["@property (nonatomic, ${1:memory control}) ${2:property};\n"],
     "description": "Create an Objc property"
   },
   "Create property for copied text": {
-    "prefix": [ "makeproperty", "mp" ],
-    "body": [ "@property (nonatomic, ${1:memory control}) ${2:type} ${3:$CLIPBOARD};\n" ],
+    "prefix": ["makeproperty", "mp"],
+    "body": [
+      "@property (nonatomic, ${1:memory control}) ${2:type} ${3:$CLIPBOARD};\n"
+    ],
     "description": "Create an Objc property with copied text"
   },
   "Create class method interface": {
     "prefix": ["funccd", "+interface"],
-    "body": [ "+ (${1:void}) ${2:func name};\n" ],
+    "body": ["+ (${1:void}) ${2:func name};\n"],
     "description": "Create an Objc class method interface"
   },
   "Create class method implementation": {
     "prefix": ["funcci", "+impl"],
-    "body": [ "+ (${1:void}) ${2:func name} {", "$4", "}" ],
+    "body": ["+ (${1:void}) ${2:func name} {", "$4", "}"],
     "description": "Create an Objc class method implementation"
   },
   "Create instance method interface": {
     "prefix": ["funcid", "-interface"],
-    "body": [ "- (${1:void}) ${2:func name};\n" ],
+    "body": ["- (${1:void}) ${2:func name};\n"],
     "description": "Create an Objc instance method interface"
   },
   "Create instance method implementation": {
     "prefix": ["funcii", "-impl"],
-    "body": [ "- (${1:void}) ${2:func name} {", "$4", "}" ],
+    "body": ["- (${1:void}) ${2:func name} {", "$4", "}"],
     "description": "Create an Objc instance method implementation"
   },
   "Function field": {
     "prefix": "field",
-    "body": [ ":(${1:type}) ${2:field}" ],
+    "body": [":(${1:type}) ${2:field}"],
     "description": "Create an Objc instance method implementation"
   },
   "Block type var": {
     "prefix": "blockvar",
-    "body": [ "${1:void} (^${2:name}) (${3:parameters}) = ^${1:void}(${3:parameters}) {\n", "};\n" ],
+    "body": [
+      "${1:void} (^${2:name}) (${3:parameters}) = ^${1:void}(${3:parameters}) {\n",
+      "};\n"
+    ],
     "description": "Create a block local variable"
   },
   "Block property": {
     "prefix": "@propertyblock",
-    "body": [ "@property (nonatomic, copy, ${1:nullability}) ${2:void} (^${3:name})(${4:parameters});\n" ],
+    "body": [
+      "@property (nonatomic, copy, ${1:nullability}) ${2:void} (^${3:name})(${4:parameters});\n"
+    ],
     "description": "Create a block property"
   },
   "@selector": {
     "prefix": "@selector",
-    "body": [ "@selector(${1:method}}" ],
+    "body": ["@selector(${1:method}}"],
     "description": "Create a @selector"
   },
   "@protocol": {
     "prefix": "@proto",
-    "body": [ "@protocol(${1:protocol name}}" ],
+    "body": ["@protocol(${1:protocol name}}"],
     "description": "Create a @protocol"
   },
   "Block field": {
     "prefix": "fieldblock",
-    "body": [ ":(${1:void} (^${2:nullability}) (${3:parameters}))${4:name)" ],
+    "body": [":(${1:void} (^${2:nullability}) (${3:parameters}))${4:name)"],
     "description": "Create a block field"
   },
   "Block typedef": {
     "prefix": "typedefblock",
-    "body": [ "typedef ${1:void} (^${2:type_name}) (${3:parameters})" ],
+    "body": ["typedef ${1:void} (^${2:type_name}) (${3:parameters})"],
     "description": "Create a block field"
   },
   "Dispatch once snip": {
@@ -290,32 +302,38 @@
   },
   "Dispatch sync": {
     "prefix": "dispatchsync",
-    "body": [ "dispatch_sync(${1:dispatch_queue_t  _Nonnull queue}, ${2:^(void)block})" ],
+    "body": [
+      "dispatch_sync(${1:dispatch_queue_t  _Nonnull queue}, ${2:^(void)block})"
+    ],
     "description": "Create a dispatch_sync"
   },
   "Dispatch async": {
     "prefix": "dispatchasync",
-    "body": [ "dispatch_async(${1:dispatch_queue_t  _Nonnull queue}, ${2:^(void)block})" ],
+    "body": [
+      "dispatch_async(${1:dispatch_queue_t  _Nonnull queue}, ${2:^(void)block})"
+    ],
     "description": "Create a dispatch_async"
   },
   "Dispatch get main queue": {
     "prefix": "dispatchgetmainqueue",
-    "body": [ "dispatch_get_main_queue()" ],
+    "body": ["dispatch_get_main_queue()"],
     "description": "Create a dispatch_get_main_queue"
   },
   "Dispatch get global queue": {
     "prefix": "dispatchgetglobalqueue",
-    "body": [ "dispatch_get_global_queue(${1:intptr_t identifier}, ${2:uintptr_t flags})" ],
+    "body": [
+      "dispatch_get_global_queue(${1:intptr_t identifier}, ${2:uintptr_t flags})"
+    ],
     "description": "Create a dispatch_get_global_queue"
   },
   "Dispatch semaphore create": {
     "prefix": "dispatchsemaphorecreate",
-    "body": [ "dispatch_semaphore_create(${1:intptr_t value})" ],
+    "body": ["dispatch_semaphore_create(${1:intptr_t value})"],
     "description": "Create a dispatch_semaphore_create"
   },
   "NSLog": {
     "prefix": "NSLog",
-    "body": [ "NSLog(@\"${1:%@}\"$2);" ],
+    "body": ["NSLog(@\"${1:%@}\"$2);"],
     "description": "Create a NSLog"
   },
   "try-catch-finally": {
@@ -335,64 +353,52 @@
   },
   "catch": {
     "prefix": "@catch",
-    "body": [
-      "@catch (NSException * e) {",
-      "\t${2:handler}",
-      "}"
-    ],
+    "body": ["@catch (NSException * e) {", "\t${2:handler}", "}"],
     "description": "Create a catch block"
   },
   "finally": {
     "prefix": "@finally",
-    "body": [
-      "@finally {",
-      "\t${0:statements}",
-      "}"
-    ],
+    "body": ["@finally {", "\t${0:statements}", "}"],
     "description": "Create a finally block"
   },
   "@synchronized": {
     "prefix": "@synchronized",
-    "body": [
-      "@synchronized (${1:token}) {",
-      "\t${2:statements}",
-      "}"
-    ],
+    "body": ["@synchronized (${1:token}) {", "\t${2:statements}", "}"],
     "description": "Create a finally block"
   },
   "MARK: -": {
     "prefix": "mark",
-    "body": [ "// MARK: - ${1:lable}" ],
+    "body": ["// MARK: - ${1:lable}"],
     "description": "Create a MARK"
   },
   "MARK: - Private": {
     "prefix": "markprivate",
-    "body": [ "// MARK: - Private" ],
+    "body": ["// MARK: - Private"],
     "description": "Create a MARK: - Private"
   },
   "MARK: - Public": {
     "prefix": "markpublic",
-    "body": [ "// MARK: - Public" ],
+    "body": ["// MARK: - Public"],
     "description": "Create a MARK: - Public"
   },
   "MARK: - UI": {
     "prefix": "markui",
-    "body": [ "// MARK: - UI" ],
+    "body": ["// MARK: - UI"],
     "description": "Create a MARK: - UI"
   },
   "MARK: - Data": {
     "prefix": "markdata",
-    "body": [ "// MARK: - Public" ],
+    "body": ["// MARK: - Public"],
     "description": "Create a MARK: - Data"
   },
   "MARK: - Override": {
     "prefix": "markoverride",
-    "body": [ "// MARK: - Override" ],
+    "body": ["// MARK: - Override"],
     "description": "Create a MARK: - Override"
   },
   "MARK: - copied text": {
     "prefix": "markselected",
-    "body": [ "// MARK: - $CLIPBOARD" ],
+    "body": ["// MARK: - $CLIPBOARD"],
     "description": "Create a MARK for copied text"
   },
   "Create file documents": {

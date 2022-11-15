@@ -1,29 +1,17 @@
 {
   "if": {
     "prefix": "if",
-    "body": [
-      "if ${1:condition}",
-      "\t$0",
-      "end"
-    ],
+    "body": ["if ${1:condition}", "\t$0", "end"],
     "description": "Code snippet for if statement."
   },
   "else": {
     "prefix": "else",
-    "body": [
-      "else",
-      "\t$0",
-      "end"
-    ],
+    "body": ["else", "\t$0", "end"],
     "description": "Code snippet for else statement."
   },
   "else if": {
     "prefix": "elseif",
-    "body": [
-      "elseif ${1:condition}",
-      "\t${2:block}",
-      "end"
-    ],
+    "body": ["elseif ${1:condition}", "\t${2:block}", "end"],
     "description": "Code snippet for elseif statement."
   },
   "if/elseif/else": {
@@ -56,29 +44,17 @@
   },
   "while": {
     "prefix": "while",
-    "body": [
-      "while ${1:condition}",
-      "\t$0",
-      "end"
-    ],
+    "body": ["while ${1:condition}", "\t$0", "end"],
     "description": "Code snippet to create a while loop."
   },
   "for": {
     "prefix": "for",
-    "body": [
-      "for ${1:value}=${2:index}:${3:index}",
-      "\t$0",
-      "end"
-    ],
+    "body": ["for ${1:value}=${2:index}:${3:index}", "\t$0", "end"],
     "description": "Code snippet to create a for loop."
   },
   "foreach": {
     "prefix": ["foreach", "forin"],
-    "body": [
-      "for ${1:value} ∈ ${2:iterable}",
-      "\t$0",
-      "end"
-    ],
+    "body": ["for ${1:value} ∈ ${2:iterable}", "\t$0", "end"],
     "description": "Code snippet to iterate each element."
   },
   "iterate": {
@@ -95,30 +71,17 @@
   },
   "function": {
     "prefix": ["fun", "func", "function"],
-    "body": [
-      "function ${1:name}(${2:arguments})",
-      "\t$0",
-      "end"
-    ],
+    "body": ["function ${1:name}(${2:arguments})", "\t$0", "end"],
     "description": "Code snippet to create a function."
   },
   "begin": {
     "prefix": ["be", "begin"],
-    "body": [
-      "begin",
-      "\t$0",
-      "end"
-    ],
+    "body": ["begin", "\t$0", "end"],
     "description": "Code snippet to create a begin block."
   },
   "main": {
     "prefix": "main",
-    "body": [
-      "function main()",
-      "\t$0",
-      "end",
-      "\nmain()"
-    ],
+    "body": ["function main()", "\t$0", "end", "\nmain()"],
     "description": "Code snippet to create a main block."
   },
   "bitwise not": {
@@ -189,29 +152,17 @@
   },
   "baremodule": {
     "prefix": ["baremodule", "bmod", "bare"],
-    "body": [
-      "baremodule ${1:name}",
-      "\t$0",
-      "end"
-    ],
+    "body": ["baremodule ${1:name}", "\t$0", "end"],
     "description": "Code snippet for module block."
   },
   "struct": {
     "prefix": "struct",
-    "body": [
-      "struct ${1:struct} <: ${2:type}",
-      "\t$0",
-      "end"
-    ],
+    "body": ["struct ${1:struct} <: ${2:type}", "\t$0", "end"],
     "description": "Code snippet for struct block."
   },
   "mutable struct": {
     "prefix": ["mutable", "mut", "mstruct"],
-    "body": [
-      "mutable struct ${1:struct} <: ${2:type}",
-      "\t$0",
-      "end"
-    ],
+    "body": ["mutable struct ${1:struct} <: ${2:type}", "\t$0", "end"],
     "description": "Code snippet for mutable struct block."
   },
   "parse expression": {

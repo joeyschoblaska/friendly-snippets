@@ -1,36 +1,33 @@
 {
   "DRF Serializer (class)": {
     "prefix": "serializer",
-    "body": [
-    	"class ${1:Name}Serializer(serializers.Serializer):",
-    	"\t${2}"
-    ],
+    "body": ["class ${1:Name}Serializer(serializers.Serializer):", "\t${2}"],
     "description": "Django-rest Serializers ``Serializer`` Class"
   },
   "DRF ModelSerializer (class)": {
     "prefix": "modelserializer",
     "body": [
-    	"class ${1:Name}ModelSerializer(serializers.ModelSerializer):",
-    	"\t${2}",
-    	"\tclass Meta:",
-    	"\t\tmodel = ${3:$1}",
-    	"\t\tfields = \"${4:__all__}\""
+      "class ${1:Name}ModelSerializer(serializers.ModelSerializer):",
+      "\t${2}",
+      "\tclass Meta:",
+      "\t\tmodel = ${3:$1}",
+      "\t\tfields = \"${4:__all__}\""
     ],
     "description": "Django-rest Serializers ``ModelSerializer`` Class"
   },
   "DRF Create (serializers-method)": {
     "prefix": "screate",
     "body": [
-    	"def create(self, validated_data):",
-    	"\treturn ${1:super().create(validated_data)}"
+      "def create(self, validated_data):",
+      "\treturn ${1:super().create(validated_data)}"
     ],
     "description": "Django-rest Serializers ``Create`` Method"
   },
   "DRF Update (serializers-method)": {
     "prefix": "supdate",
     "body": [
-    	"def update(self, instance, validated_data):",
-    	"\treturn ${1:super().update(instance, validated_data)}"
+      "def update(self, instance, validated_data):",
+      "\treturn ${1:super().update(instance, validated_data)}"
     ],
     "description": "Django-rest Serializers ``Update`` Method"
   },
@@ -162,9 +159,9 @@
   "DRF SerializerMethodField": {
     "prefix": "ssmethod",
     "body": [
-    	"${1:FIELDNAME} = serializers.SerializerMethodField(${2})",
-    	"def get_$1(self, object):",
-    	"\treturn"
+      "${1:FIELDNAME} = serializers.SerializerMethodField(${2})",
+      "def get_$1(self, object):",
+      "\treturn"
     ],
     "description": "Django-rest Serializers ``SerializerMethodField``"
   },

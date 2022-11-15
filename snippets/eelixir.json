@@ -13,29 +13,15 @@
   },
   "for": {
     "prefix": "for",
-    "body": [
-      "<%= for ${1:item} <- ${2:items} do %>",
-      "  $0",
-      "<% end %>"
-    ]
+    "body": ["<%= for ${1:item} <- ${2:items} do %>", "  $0", "<% end %>"]
   },
   "if": {
     "prefix": "if",
-    "body": [
-      "<%= if ${1} do %>",
-      "  $0",
-      "<% end %>"
-    ]
+    "body": ["<%= if ${1} do %>", "  $0", "<% end %>"]
   },
   "ife": {
     "prefix": "if",
-    "body": [
-      "<%= if ${1} do %>",
-      "  $2",
-      "<% else %>",
-      "  $0",
-      "<% end %>"
-    ]
+    "body": ["<%= if ${1} do %>", "  $2", "<% else %>", "  $0", "<% end %>"]
   },
   "lin": {
     "prefix": "if",

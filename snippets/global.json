@@ -6,7 +6,9 @@
   },
   "diso": {
     "prefix": "diso",
-    "body": ["${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}"],
+    "body": [
+      "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}"
+    ],
     "description": "ISO date time stamp"
   },
   "date": {
@@ -31,7 +33,9 @@
   },
   "datetime": {
     "prefix": "datetime",
-    "body": ["${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}"],
+    "body": [
+      "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}"
+    ],
     "description": "I give you back the time and date (Y-m-d H:M)"
   },
   "Lorem Ipsum Sentence": {
@@ -45,7 +49,7 @@
     "description": "Lorem Ipsum Paragraph"
   },
   "MIT": {
-    "prefix": "mitl" ,
+    "prefix": "mitl",
     "description": "MIT License",
     "body": [
       "The MIT License (MIT)",
@@ -72,7 +76,7 @@
     ]
   },
   "GPL2": {
-    "prefix": "GPL2" ,
+    "prefix": "GPL2",
     "description": "GPLv2 License",
     "body": [
       "The GPLv2 License (GPLv2)",
@@ -94,7 +98,7 @@
     ]
   },
   "LGPL2": {
-    "prefix": "LGPL2" ,
+    "prefix": "LGPL2",
     "description": "GPLv2 License",
     "body": [
       "The GPLv2 License (GPLv2)",
