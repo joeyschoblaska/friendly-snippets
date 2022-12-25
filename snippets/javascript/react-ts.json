@@ -361,5 +361,9 @@
     "prefix": "tita",
     "body": ["it('should $1', async () => {", "  $0", "})", ""],
     "description": "Testing async `it` block"
+  },
+  "div with class": {
+    "prefix": "div",
+    "body": ["<div className=\"${1}\">$0</div>"]
   }
 }
