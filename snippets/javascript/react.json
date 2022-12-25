@@ -368,7 +368,7 @@
     "description": "Testing async `it` block"
   },
   "div with class": {
-    "prefix": "div.",
+    "prefix": "div",
     "body": ["<div className=\"${1}\">$0</div>"]
   }
 }
